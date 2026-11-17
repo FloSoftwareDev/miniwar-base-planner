@@ -3,11 +3,12 @@
 // Default plot size in studs. Editable in the toolbar (Bigger Plot research adds rows).
 export const DEFAULT_PLOT = { cols: 100, rows: 100 };
 
-// Super worker bonus on gem mines (wiki: +50% production speed per super worker).
+// Each worker adds the mine's per-worker output; a super worker adds 50% more than a normal one.
 export const SUPER_WORKER_GEM_BONUS = 0.5;
 
-// Gem mine mutations and their production multipliers.
-export const MUTATIONS = { None: 1 };
+// Gem mine mutations and their production speed multipliers.
+// Alien is 2x; the others are roughly 1.5x–1.75x.
+export const MUTATIONS = { None: 1, Alien: 2, Anomaly: 1.75, Radioactive: 1.5 };
 
 export const CATEGORY_COLORS = {
   Factory: "#3f6212",

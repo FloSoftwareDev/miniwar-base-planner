@@ -18,7 +18,7 @@ async function loadCatalog() {
 }
 
 function isGemMine(item) {
-  return "gemsPerHour" in catalog[item.id];
+  return "gemsPerWorkerHour" in catalog[item.id];
 }
 
 function newItem(id, x, y, rot) {
@@ -43,9 +43,8 @@ function fits(item, x, y) {
 }
 
 function gemsPerHour(item) {
-  const b = catalog[item.id];
-  const staffed = (item.workers + item.superWorkers) / b.civilianSlots;
-  return b.gemsPerHour * staffed * (1 + SUPER_WORKER_GEM_BONUS * item.superWorkers) * MUTATIONS[item.mutation];
+  const workerUnits = item.workers + item.superWorkers * (1 + SUPER_WORKER_GEM_BONUS);
+  return catalog[item.id].gemsPerWorkerHour * workerUnits * MUTATIONS[item.mutation];
 }
 
 function superWorkerCapacity() {

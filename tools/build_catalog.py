@@ -3,6 +3,7 @@
 Stats and sizes come from miniwar-roblox.fandom.com (the maintained wiki).
 Icons, plus sizes the maintained wiki lacks, come from mini-war-roblox.fandom.com.
 
+Buildings neither wiki has a stat card for go in data/extra-buildings.json.
 Sizes neither wiki lists go in data/size-overrides.json as {"Building Name": [w, h]}.
 
 Run from the repo root:  python3 tools/build_catalog.py
@@ -77,7 +78,7 @@ def parse_cards(wikitext, category):
 
 
 def parse_gem_production(card):
-    """'+4 / 30 min' -> gems per hour."""
+    """'+4 / 30 min' (per worker) -> gems per worker per hour."""
     stat = next(s for s in card["stats"] if s.startswith("Production:"))
     m = re.search(r"\+([\d.]+)\s*/\s*(\d+)\s*(min|s|hr)", stat)
     amount, period, unit = float(m.group(1)), int(m.group(2)), m.group(3)
@@ -126,6 +127,9 @@ def main():
     cards = [c for page, cat in MAIN_PAGES.items() for c in parse_cards(main_pages[page], cat)]
     icon_info = parse_icon_wiki(fetch_wikitext(ICON_API, all_titles(ICON_API)))
     size_overrides = json.loads((ROOT / "data" / "size-overrides.json").read_text())
+    cards += json.loads((ROOT / "data" / "extra-buildings.json").read_text())
+    gem_mine = next(c for c in cards if c["name"] == "Gem Mine")
+    gem_mine["gemsPerWorkerHour"] = parse_gem_production(gem_mine)
 
     buildings, icons, missing_size = [], [], []
     for c in cards:
@@ -135,14 +139,13 @@ def main():
             missing_size.append(c["name"])
         b = {"id": slug(c["name"]), "name": c["name"], "category": c["category"],
              "rarity": c["rarity"], "size": size, "stats": c["stats"]}
-        for k in ("civilianSlots", "maxSuperWorkers", "civilians"):
+        for k in ("civilianSlots", "maxSuperWorkers", "civilians", "gemsPerWorkerHour"):
             if k in c:
                 b[k] = c[k]
-        if c["name"] == "Gem Mine":
-            b["gemsPerHour"] = parse_gem_production(c)
-        if extra.get("image"):
-            b["icon"] = "assets/buildings/" + icon_file(extra["image"])
-            icons.append(extra["image"])
+        image = c.get("image") or extra.get("image")
+        if image:
+            b["icon"] = "assets/buildings/" + icon_file(image)
+            icons.append(image)
         buildings.append(b)
 
     download_icons(icons, ROOT / "assets" / "buildings")

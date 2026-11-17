@@ -1699,7 +1699,10 @@
   "name": "Gem Mine",
   "category": "Black Market",
   "rarity": "Epic",
-  "size": null,
+  "size": [
+   10,
+   11
+  ],
   "stats": [
    "Cost: 220 Gems",
    "Resell: $10,000,000",
@@ -1710,7 +1713,7 @@
    "Civilian Slots: 4"
   ],
   "civilianSlots": 4,
-  "gemsPerHour": 8.0,
+  "gemsPerWorkerHour": 8.0,
   "icon": "assets/buildings/roblox-asset-111647953939345.png"
  },
  {
@@ -1871,5 +1874,23 @@
    "Effect: Custom Player Statue"
   ],
   "icon": "assets/buildings/roblox-asset-112043665332324.png"
+ },
+ {
+  "id": "gem-deep-mine",
+  "name": "Gem Deep Mine",
+  "category": "Black Market",
+  "rarity": "Secret",
+  "size": [
+   14,
+   14
+  ],
+  "stats": [
+   "Obtain: Crafting (12 hr, 1,500 Gems, $250,000,000,000) or crates",
+   "Production: +5 / 30 min per worker",
+   "Civilian Slots: 4"
+  ],
+  "civilianSlots": 4,
+  "gemsPerWorkerHour": 10,
+  "icon": "assets/buildings/roblox-asset-106549983684696.png"
  }
 ]

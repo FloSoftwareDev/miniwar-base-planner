@@ -21,6 +21,7 @@ Then open http://localhost:8000. It also deploys as-is to GitHub Pages.
 - `data/buildings.json` and `assets/buildings/` are generated from the fan wikis by `python3 tools/build_catalog.py`. Re-run it when the wiki updates.
 - Sizes the wikis don't list go in `data/size-overrides.json` as `{"Building Name": [w, h]}`. Re-run the script afterwards. Buildings without a size show greyed out.
 - Gem formula and mutation multipliers live in `rules.js`:
-  `gems/h = 8 × (filled slots / 4) × (1 + 0.5 × super workers) × mutation`
+  `gems/h = gems per worker per hour × (workers + 1.5 × super workers) × mutation`
+- Buildings the wikis have no stat card for (e.g. Gem Deep Mine) go in `data/extra-buildings.json`.
 
 Building data and icons come from the community wikis (miniwar-roblox.fandom.com and mini-war-roblox.fandom.com). This is a fan tool, not affiliated with Roblox or the game's developers.
