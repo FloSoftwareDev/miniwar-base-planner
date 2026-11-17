@@ -1,7 +1,7 @@
 // Hand-maintained game rules. Building stats live in data/buildings.json (generated).
 
 // Default plot size in studs. Editable in the toolbar (Bigger Plot research adds rows).
-export const DEFAULT_PLOT = { cols: 100, rows: 100 };
+export const DEFAULT_PLOT = { cols: 170, rows: 128 };
 
 // Each worker adds the mine's per-worker output; a super worker adds 50% more than a normal one.
 export const SUPER_WORKER_GEM_BONUS = 0.5;
