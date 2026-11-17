@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniWar Base Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>MiniWar Base Planner</h1>
+    <div class="stats">
+      <div>Gems / hour <strong id="gemsHour">0</strong></div>
+      <div>Gems / day <strong id="gemsDay">0</strong></div>
+      <div>Super workers <strong id="superWorkers">0 / 0</strong></div>
+    </div>
+    <div class="toolbar">
+      <label>Plot <input id="plotCols" type="number" min="10" max="400"> × <input id="plotRows" type="number" min="10" max="400"></label>
+      <label>Zoom <input id="zoom" type="range" min="4" max="24" value="8"></label>
+      <button id="undoBtn" title="Ctrl+Z">Undo</button>
+      <button id="clearBtn">Clear</button>
+      <button id="shareBtn">Copy share link</button>
+    </div>
+  </header>
+  <main>
+    <aside id="palettePanel">
+      <input id="search" type="search" placeholder="Search buildings…">
+      <div id="palette"></div>
+    </aside>
+    <section id="viewport"><div id="grid"></div></section>
+    <aside id="inspector"></aside>
+  </main>
+  <footer>Drag buildings onto the plot · Drag to move · Alt+drag or Ctrl+D to duplicate · R rotate · Del remove · Ctrl+Z undo</footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

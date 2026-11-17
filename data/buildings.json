@@ -1,0 +1,1875 @@
+[
+ {
+  "id": "wheat-farm",
+  "name": "Wheat Farm",
+  "category": "Factory",
+  "rarity": "Common",
+  "size": [
+   4,
+   4
+  ],
+  "stats": [
+   "Cost: $150",
+   "Resell: $15",
+   "Build: 7s",
+   "+6 / 10s",
+   "Output: Wheat",
+   "Sell: $14",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 4 x 4"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-106706971138183.png"
+ },
+ {
+  "id": "corn-farm",
+  "name": "Corn Farm",
+  "category": "Factory",
+  "rarity": "Common",
+  "size": [
+   4,
+   4
+  ],
+  "stats": [
+   "Cost: $150",
+   "Resell: $25",
+   "Build: 8s",
+   "+6 / 10s",
+   "Output: Corn",
+   "Sell: $18",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 4 x 4"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-126752780040433.png"
+ },
+ {
+  "id": "coal-cave",
+  "name": "Coal Cave",
+  "category": "Factory",
+  "rarity": "Common",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $500",
+   "Resell: $50",
+   "Build: 13s",
+   "+6 / 10s",
+   "Output: Coal",
+   "Sell: $26",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 8 x 8"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-91937967844447.png"
+ },
+ {
+  "id": "tree-farm",
+  "name": "Tree Farm",
+  "category": "Factory",
+  "rarity": "Common",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $1,000",
+   "Resell: $100",
+   "Build: 16s",
+   "+6 / 10s",
+   "Output: Wood",
+   "Sell: $38",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 8 x 8"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-109630859235738.png"
+ },
+ {
+  "id": "windmill",
+  "name": "Windmill",
+  "category": "Factory",
+  "rarity": "Common",
+  "size": [
+   6,
+   6
+  ],
+  "stats": [
+   "Cost: $1,800",
+   "Resell: $180",
+   "Build: 19s",
+   "+6 / 10s",
+   "Output: Flour",
+   "Sell: $48",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 6 x 6"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-113505558919348.png"
+ },
+ {
+  "id": "carrot-farm",
+  "name": "Carrot Farm",
+  "category": "Factory",
+  "rarity": "Uncommon",
+  "size": [
+   4,
+   4
+  ],
+  "stats": [
+   "Cost: $6,500",
+   "Resell: $650",
+   "Build: 21s",
+   "+6 / 10s",
+   "Output: Carrot",
+   "Sell: $66",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 4 x 4"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-96806984618046.png"
+ },
+ {
+  "id": "library",
+  "name": "Library",
+  "category": "Factory",
+  "rarity": "Uncommon",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $9,000",
+   "Resell: $900",
+   "Build: 27s",
+   "+6 / 10s",
+   "Output: Books",
+   "Sell: $94",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 8 x 8"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-105342161282946.png"
+ },
+ {
+  "id": "oil-rig",
+  "name": "Oil Rig",
+  "category": "Factory",
+  "rarity": "Uncommon",
+  "size": [
+   6,
+   6
+  ],
+  "stats": [
+   "Cost: $13,000",
+   "Resell: $1,300",
+   "Build: 30s",
+   "+6 / 10s",
+   "Output: Oil",
+   "Sell: $120",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 6 x 6"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-76511020106157.png"
+ },
+ {
+  "id": "wood-plant",
+  "name": "Wood Plant",
+  "category": "Factory",
+  "rarity": "Uncommon",
+  "size": [
+   12,
+   8
+  ],
+  "stats": [
+   "Cost: $15,000",
+   "Resell: $1,500",
+   "Build: 5 min",
+   "+20 / 10s",
+   "Output: Wood",
+   "Sell: $38",
+   "Capacity: 1,800",
+   "Civilian Slots: 2",
+   "Size: 12 x 8"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-133771928717489.png"
+ },
+ {
+  "id": "iron-cave",
+  "name": "Iron Cave",
+  "category": "Factory",
+  "rarity": "Rare",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $80,000",
+   "Resell: $8,000",
+   "Build: 20 min",
+   "+6 / 10s",
+   "Output: Iron",
+   "Sell: $120",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 8 x 8"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-86444456515267.png"
+ },
+ {
+  "id": "cement-plant",
+  "name": "Cement Plant",
+  "category": "Factory",
+  "rarity": "Rare",
+  "size": [
+   9,
+   9
+  ],
+  "stats": [
+   "Cost: $180,000",
+   "Resell: $18,000",
+   "Build: 30 min",
+   "+6 / 10s",
+   "Output: Cement",
+   "Sell: $170",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 9 x 9"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-83478228684326.png"
+ },
+ {
+  "id": "gold-cave",
+  "name": "Gold Cave",
+  "category": "Factory",
+  "rarity": "Epic",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $450,000",
+   "Resell: $45,000",
+   "Build: 45 min",
+   "+6 / 10s",
+   "Output: Gold",
+   "Sell: $260",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 8 x 8"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-73845719360570.png"
+ },
+ {
+  "id": "bank",
+  "name": "Bank",
+  "category": "Factory",
+  "rarity": "Epic",
+  "size": [
+   12,
+   12
+  ],
+  "stats": [
+   "Cost: $1,000,000",
+   "Resell: $100,000",
+   "Build: 60 min",
+   "+6 / 10s",
+   "Output: Coin Bag",
+   "Sell: $410",
+   "Capacity: 540",
+   "Civilian Slots: 3",
+   "Size: 12 x 12"
+  ],
+  "civilianSlots": 3,
+  "icon": "assets/buildings/roblox-asset-96475437301675.png"
+ },
+ {
+  "id": "research-lab",
+  "name": "Research Lab",
+  "category": "Factory",
+  "rarity": "Legendary",
+  "size": [
+   9,
+   9
+  ],
+  "stats": [
+   "Cost: $5,000,000",
+   "Resell: $500,000",
+   "Build: 1h 15m",
+   "+6 / 10s",
+   "Output: Research",
+   "Sell: $540",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 9 x 9"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-80124915348049.png"
+ },
+ {
+  "id": "diamond-cave",
+  "name": "Diamond Cave",
+  "category": "Factory",
+  "rarity": "Legendary",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $7,500,000",
+   "Resell: $750,000",
+   "Build: 1h 30m",
+   "+6 / 10s",
+   "Output: Diamond",
+   "Sell: $840",
+   "Capacity: 540",
+   "Civilian Slots: 2",
+   "Size: 8 x 8"
+  ],
+  "civilianSlots": 2,
+  "icon": "assets/buildings/roblox-asset-116841821583584.png"
+ },
+ {
+  "id": "uranium-cave",
+  "name": "Uranium Cave",
+  "category": "Factory",
+  "rarity": "Mythic",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $10,000,000",
+   "Resell: $1,000,000",
+   "Build: 2h",
+   "+15 / 10s",
+   "Output: Uranium Ore",
+   "Sell: $1,330",
+   "Capacity: 540",
+   "Civilian Slots: 5",
+   "Size: 8 x 8"
+  ],
+  "civilianSlots": 5,
+  "icon": "assets/buildings/roblox-asset-103376044366378.png"
+ },
+ {
+  "id": "nuclear-reactor",
+  "name": "Nuclear Reactor",
+  "category": "Factory",
+  "rarity": "Mythic",
+  "size": [
+   13,
+   13
+  ],
+  "stats": [
+   "Cost: $20,000,000",
+   "Resell: $2,000,000",
+   "Build: 3h",
+   "+12 / 10s",
+   "Output: Stable Uranium",
+   "Sell: $2,100",
+   "Capacity: 1080",
+   "Civilian Slots: 4",
+   "Size: 13 x 13"
+  ],
+  "civilianSlots": 4,
+  "icon": "assets/buildings/roblox-asset-125655149816802.png"
+ },
+ {
+  "id": "data-center",
+  "name": "Data Center",
+  "category": "Factory",
+  "rarity": "Mythic",
+  "size": [
+   12,
+   12
+  ],
+  "stats": [
+   "Cost: $50,000,000",
+   "Resell: $5,000,000",
+   "Build: 3h",
+   "+16 / 10s",
+   "Output: Data Cube",
+   "Sell: $3,000",
+   "Capacity: 1440",
+   "Civilian Slots: 4",
+   "Size: 12 x 12"
+  ],
+  "civilianSlots": 4,
+  "icon": "assets/buildings/roblox-asset-111705097474983.png"
+ },
+ {
+  "id": "blackhole-generator",
+  "name": "Blackhole Generator",
+  "category": "Factory",
+  "rarity": "Secret",
+  "size": [
+   12,
+   12
+  ],
+  "stats": [
+   "Cost: $1,000,000,000",
+   "Resell: $100,000,000",
+   "Build: 24h",
+   "+48 / 10s",
+   "Output: Dark Matter",
+   "Sell: $5,000",
+   "Capacity: 4320",
+   "Civilian Slots: 6",
+   "Size: 12 x 12"
+  ],
+  "civilianSlots": 6,
+  "icon": "assets/buildings/roblox-asset-93152492665918.png"
+ },
+ {
+  "id": "area-51-lab",
+  "name": "Area 51 Lab",
+  "category": "Factory",
+  "rarity": "Secret",
+  "size": [
+   16,
+   16
+  ],
+  "stats": [
+   "Cost: $7,500,000,000",
+   "Resell: $750,000,000",
+   "Build: 48h",
+   "+24 / 10s",
+   "Output: Alien Essence",
+   "Sell: $20,000",
+   "Capacity: 2160",
+   "Civilian Slots: 6",
+   "Size: 16 x 16"
+  ],
+  "civilianSlots": 6,
+  "icon": "assets/buildings/roblox-asset-77390641989533.png"
+ },
+ {
+  "id": "antimatter-reactor",
+  "name": "Antimatter Reactor",
+  "category": "Factory",
+  "rarity": "Secret",
+  "size": [
+   10,
+   10
+  ],
+  "stats": [
+   "Cost: $50,000,000,000",
+   "Resell: $5,000,000,000",
+   "Build: 48h",
+   "+16 / 10s",
+   "Output: Antimatter",
+   "Sell: $40,000",
+   "Capacity: 1440",
+   "Civilian Slots: 4",
+   "Size: 10 x 10"
+  ],
+  "civilianSlots": 4,
+  "icon": "assets/buildings/roblox-asset-82060124046639.png"
+ },
+ {
+  "id": "quantum-core-generator",
+  "name": "Quantum Core Generator",
+  "category": "Factory",
+  "rarity": "Divine",
+  "size": [
+   10,
+   10
+  ],
+  "stats": [
+   "Cost: $250,000,000,000",
+   "Resell: $25,000,000,000",
+   "Build: 72h",
+   "+18 / 10s",
+   "Output: Quantum Core",
+   "Sell: $90,000",
+   "Capacity: 1620",
+   "Civilian Slots: 6",
+   "Size: 10 x 10"
+  ],
+  "civilianSlots": 6,
+  "icon": "assets/buildings/roblox-asset-121411927449451.png"
+ },
+ {
+  "id": "supernova-accelerator",
+  "name": "Supernova Accelerator",
+  "category": "Factory",
+  "rarity": "Divine",
+  "size": [
+   18,
+   18
+  ],
+  "stats": [
+   "Cost: $1,000,000,000,000",
+   "Resell: $100,000,000,000",
+   "Build: 96h",
+   "+20 / 10s",
+   "Output: Supernova Charge",
+   "Sell: $225,000",
+   "Capacity: 1440",
+   "Civilian Slots: 4",
+   "Size: 18 x 18"
+  ],
+  "civilianSlots": 4,
+  "icon": "assets/buildings/roblox-asset-95973937247092.png"
+ },
+ {
+  "id": "gamma-ray-generator",
+  "name": "Gamma Ray Generator",
+  "category": "Factory",
+  "rarity": "Divine",
+  "size": [
+   16,
+   16
+  ],
+  "stats": [
+   "Cost: $50,000,000,000,000",
+   "Resell: $5,000,000,000",
+   "Build: 120h",
+   "+20 / 10s",
+   "Output: Gamma Ray",
+   "Sell: $450,000",
+   "Capacity: 1440",
+   "Civilian Slots: 4",
+   "Size: 16 x 16"
+  ],
+  "civilianSlots": 4,
+  "icon": "assets/buildings/roblox-asset-78438339517740.png"
+ },
+ {
+  "id": "mega-drill",
+  "name": "Mega Drill",
+  "category": "Factory",
+  "rarity": "Limited",
+  "size": [
+   9,
+   9
+  ],
+  "stats": [
+   "Cost: Veteran Crate (Daily / Robux)",
+   "Resell: $5,000,000",
+   "Build: 1h",
+   "+256 / 10s",
+   "Output: Oil",
+   "Sell: $120",
+   "Capacity: ?",
+   "Civilian Slots: 8",
+   "Size: 9 x 9"
+  ],
+  "civilianSlots": 8,
+  "icon": "assets/buildings/roblox-asset-138645106176935.png"
+ },
+ {
+  "id": "robo-lab",
+  "name": "Robo Lab",
+  "category": "Factory",
+  "rarity": "Limited",
+  "size": null,
+  "stats": [
+   "Cost: Prototype Crate (Daily / Robux)",
+   "Resell: $5,000,000",
+   "Build: 6h",
+   "+9 / 10s",
+   "Output: Robo Head",
+   "Sell: $2,500",
+   "Capacity: ?",
+   "Civilian Slots: ?",
+   "Size: ?"
+  ],
+  "icon": "assets/buildings/roblox-asset-120182642041079.png"
+ },
+ {
+  "id": "farm-house",
+  "name": "Farm House",
+  "category": "House",
+  "rarity": "Common",
+  "size": [
+   4,
+   4
+  ],
+  "stats": [
+   "Cost: $150",
+   "Resell: $15",
+   "Build: 5s",
+   "Civilians: +2",
+   "Size: 4 x 4"
+  ],
+  "civilians": 2,
+  "icon": "assets/buildings/roblox-asset-82740434031677.png"
+ },
+ {
+  "id": "small-house",
+  "name": "Small House",
+  "category": "House",
+  "rarity": "Common",
+  "size": [
+   4,
+   4
+  ],
+  "stats": [
+   "Cost: $300",
+   "Resell: $30",
+   "Build: 10s",
+   "Civilians: +3",
+   "Size: 4 x 4"
+  ],
+  "civilians": 3,
+  "icon": "assets/buildings/roblox-asset-81696535332835.png"
+ },
+ {
+  "id": "house",
+  "name": "House",
+  "category": "House",
+  "rarity": "Common",
+  "size": [
+   6,
+   4
+  ],
+  "stats": [
+   "Cost: $700",
+   "Resell: $70",
+   "Build: 15s",
+   "Civilians: +4",
+   "Size: 6 x 4"
+  ],
+  "civilians": 4,
+  "icon": "assets/buildings/roblox-asset-127179017034437.png"
+ },
+ {
+  "id": "villa",
+  "name": "Villa",
+  "category": "House",
+  "rarity": "Uncommon",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $3,000",
+   "Resell: $300",
+   "Build: 21s",
+   "Civilians: +5",
+   "Size: 8 x 8"
+  ],
+  "civilians": 5,
+  "icon": "assets/buildings/roblox-asset-132017418100297.png"
+ },
+ {
+  "id": "apartment-building",
+  "name": "Apartment Building",
+  "category": "House",
+  "rarity": "Uncommon",
+  "size": [
+   8,
+   6
+  ],
+  "stats": [
+   "Cost: $7,500",
+   "Resell: $750",
+   "Build: 27s",
+   "Civilians: +6",
+   "Size: 8 x 6"
+  ],
+  "civilians": 6,
+  "icon": "assets/buildings/roblox-asset-91284346430605.png"
+ },
+ {
+  "id": "modern-block",
+  "name": "Modern Block",
+  "category": "House",
+  "rarity": "Rare",
+  "size": [
+   8,
+   6
+  ],
+  "stats": [
+   "Cost: $40,000",
+   "Resell: $4,000",
+   "Build: 10 min",
+   "Civilians: +8",
+   "Size: 8 x 6"
+  ],
+  "civilians": 8,
+  "icon": "assets/buildings/roblox-asset-73098088330577.png"
+ },
+ {
+  "id": "skyscraper",
+  "name": "Skyscraper",
+  "category": "House",
+  "rarity": "Epic",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $400,000",
+   "Resell: $40,000",
+   "Build: 20 min",
+   "Civilians: +10",
+   "Size: 8 x 8"
+  ],
+  "civilians": 10,
+  "icon": "assets/buildings/roblox-asset-117702938963366.png"
+ },
+ {
+  "id": "helix-tower",
+  "name": "Helix Tower",
+  "category": "House",
+  "rarity": "Legendary",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $2,500,000",
+   "Resell: $250,000",
+   "Build: 45 min",
+   "Civilians: +13",
+   "Size: 8 x 8",
+   "Max Possible Super Workers: 3"
+  ],
+  "maxSuperWorkers": 3,
+  "civilians": 13,
+  "icon": "assets/buildings/roblox-asset-137679666297462.png"
+ },
+ {
+  "id": "the-manor",
+  "name": "The Manor",
+  "category": "House",
+  "rarity": "Mythic",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $10,000,000",
+   "Resell: $1,000,000",
+   "Build: 1 hr",
+   "Civilians: +14",
+   "Size: 8 x 8",
+   "Max Possible Super Workers: 4"
+  ],
+  "maxSuperWorkers": 4,
+  "civilians": 14,
+  "icon": "assets/buildings/roblox-asset-132539266218899.png"
+ },
+ {
+  "id": "hotel",
+  "name": "Hotel",
+  "category": "House",
+  "rarity": "Mythic",
+  "size": [
+   14,
+   14
+  ],
+  "stats": [
+   "Cost: $50,000,000",
+   "Resell: $5,000,000",
+   "Build: 1 hr",
+   "Civilians: +20",
+   "Size: 14 x 14",
+   "Max Possible Super Workers: 5"
+  ],
+  "maxSuperWorkers": 5,
+  "civilians": 20,
+  "icon": "assets/buildings/roblox-asset-105739544709311.png"
+ },
+ {
+  "id": "giant-skyscraper",
+  "name": "Giant Skyscraper",
+  "category": "House",
+  "rarity": "Secret",
+  "size": [
+   14,
+   14
+  ],
+  "stats": [
+   "Cost: $1,000,000,000",
+   "Resell: $100,000,000",
+   "Build: 24hr",
+   "Civilians: +30",
+   "Size: 14 x 14",
+   "Max Possible Super Workers: 7"
+  ],
+  "maxSuperWorkers": 7,
+  "civilians": 30,
+  "icon": "assets/buildings/roblox-asset-72874903247631.png"
+ },
+ {
+  "id": "double-turbo-tower",
+  "name": "Double Turbo Tower",
+  "category": "House",
+  "rarity": "Secret",
+  "size": [
+   17,
+   12
+  ],
+  "stats": [
+   "Cost: $25,000,000,000",
+   "Resell: $2,500,000,000",
+   "Build: 48hr",
+   "Civilians: +55",
+   "Size: 17 x 12",
+   "Max Possible Super Workers: 10"
+  ],
+  "maxSuperWorkers": 10,
+  "civilians": 55,
+  "icon": "assets/buildings/roblox-asset-114232636913328.png"
+ },
+ {
+  "id": "grand-hotel",
+  "name": "Grand Hotel",
+  "category": "House",
+  "rarity": "Divine",
+  "size": [
+   20,
+   15
+  ],
+  "stats": [
+   "Cost: $125,000,000,000",
+   "Resell: $12,500,000,000",
+   "Build: 72hr",
+   "Civilians: +75",
+   "Size: 20 x 15",
+   "Max Possible Super Workers: 12"
+  ],
+  "maxSuperWorkers": 12,
+  "civilians": 75,
+  "icon": "assets/buildings/roblox-asset-124627867175498.png"
+ },
+ {
+  "id": "border-tower",
+  "name": "Border Tower",
+  "category": "Military",
+  "rarity": "Common",
+  "size": [
+   6,
+   6
+  ],
+  "stats": [
+   "Cost: $150",
+   "Resell: $15",
+   "Build: 10s",
+   "Function: Defense",
+   "Unit: 1 Soldier",
+   "HP: 120"
+  ],
+  "icon": "assets/buildings/roblox-asset-85425382750065.png"
+ },
+ {
+  "id": "barracks",
+  "name": "Barracks",
+  "category": "Military",
+  "rarity": "Common",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $750",
+   "Resell: $75",
+   "Build: 17s",
+   "Function: Infantry Production",
+   "Units: 2 Soldiers",
+   "HP: 100"
+  ],
+  "icon": "assets/buildings/roblox-asset-97507415027464.png"
+ },
+ {
+  "id": "sniper-tower",
+  "name": "Sniper Tower",
+  "category": "Military",
+  "rarity": "Uncommon",
+  "size": [
+   6,
+   6
+  ],
+  "stats": [
+   "Cost: $4,000",
+   "Resell: $400",
+   "Build: 21s",
+   "Function: Defense",
+   "Unit: 1 Sniper",
+   "HP: 80"
+  ],
+  "icon": "assets/buildings/roblox-asset-91542518504954.png"
+ },
+ {
+  "id": "vehicle-base",
+  "name": "Vehicle Base",
+  "category": "Military",
+  "rarity": "Uncommon",
+  "size": [
+   8,
+   8
+  ],
+  "stats": [
+   "Cost: $8,000",
+   "Resell: $800",
+   "Build: 27s",
+   "Function: Vehicle Production",
+   "Units: 2 Light Vehicles",
+   "HP: 600\u2013750"
+  ],
+  "icon": "assets/buildings/roblox-asset-92643994481417.png"
+ },
+ {
+  "id": "tank-base",
+  "name": "Tank Base",
+  "category": "Military",
+  "rarity": "Rare",
+  "size": [
+   9,
+   9
+  ],
+  "stats": [
+   "Cost: $25,000",
+   "Resell: $2,500",
+   "Build: 5 min",
+   "Function: Heavy Unit Production",
+   "Units: 2 Tanks",
+   "HP: 1,000"
+  ],
+  "icon": "assets/buildings/roblox-asset-80592014568039.png"
+ },
+ {
+  "id": "helipad",
+  "name": "Helipad",
+  "category": "Military",
+  "rarity": "Rare",
+  "size": [
+   9,
+   9
+  ],
+  "stats": [
+   "Cost: $140,000",
+   "Resell: $14,000",
+   "Build: 15 min",
+   "Function: Air Production",
+   "Units: 2 Heavy / 1 Light Helicopter",
+   "HP: 600\u20131,200"
+  ],
+  "icon": "assets/buildings/roblox-asset-121849715124398.png"
+ },
+ {
+  "id": "special-forces",
+  "name": "Special Forces",
+  "category": "Military",
+  "rarity": "Epic",
+  "size": [
+   9,
+   9
+  ],
+  "stats": [
+   "Cost: $300,000",
+   "Resell: $30,000",
+   "Build: 20 min",
+   "Function: Elite Infantry",
+   "Units: Sniper / Flamethrower / Shotgunner / Rifleman",
+   "HP: 150\u2013200"
+  ],
+  "icon": "assets/buildings/roblox-asset-98789338515448.png"
+ },
+ {
+  "id": "missile-hangar",
+  "name": "Missile Hangar",
+  "category": "Military",
+  "rarity": "Epic",
+  "size": [
+   9,
+   9
+  ],
+  "stats": [
+   "Cost: $600,000",
+   "Resell: $60,000",
+   "Build: 30 min",
+   "Function: Missile Production",
+   "Units: 2 Rocket Trucks / 1 Rocket Unit",
+   "HP: 120\u2013400"
+  ],
+  "icon": "assets/buildings/roblox-asset-120151429208210.png"
+ },
+ {
+  "id": "hangar",
+  "name": "Hangar",
+  "category": "Military",
+  "rarity": "Epic",
+  "size": [
+   12,
+   12
+  ],
+  "stats": [
+   "Cost: $1,200,000",
+   "Resell: $120,000",
+   "Build: 40 min",
+   "Function: Air Production",
+   "Units: 3 Fighter Jets",
+   "HP: 900"
+  ],
+  "icon": "assets/buildings/roblox-asset-108070775869659.png"
+ },
+ {
+  "id": "big-tank-base",
+  "name": "Big Tank Base",
+  "category": "Military",
+  "rarity": "Legendary",
+  "size": [
+   9,
+   9
+  ],
+  "stats": [
+   "Cost: $2,400,000",
+   "Resell: $240,000",
+   "Build: 50 min",
+   "Function: Advanced Armor",
+   "Units: 4 Modern Tanks",
+   "HP: 1,500"
+  ],
+  "icon": "assets/buildings/roblox-asset-103916322209871.png"
+ },
+ {
+  "id": "big-hangar",
+  "name": "Big Hangar",
+  "category": "Military",
+  "rarity": "Legendary",
+  "size": [
+   12,
+   12
+  ],
+  "stats": [
+   "Cost: $3,000,000",
+   "Resell: $300,000",
+   "Build: 1 hr",
+   "Function: Advanced Air",
+   "Units: 4 Fighter Jets",
+   "HP: 800"
+  ],
+  "icon": "assets/buildings/roblox-asset-133945899245107.png"
+ },
+ {
+  "id": "missile-launcher",
+  "name": "Missile Launcher",
+  "category": "Military",
+  "rarity": "Legendary",
+  "size": [
+   9,
+   9
+  ],
+  "stats": [
+   "Cost: $4,500,000",
+   "Resell: $450,000",
+   "Build: 1 hr",
+   "Function: Offensive Structure",
+   "Unit: Missile System",
+   "HP: N/A"
+  ],
+  "icon": "assets/buildings/roblox-asset-137183043256722.png"
+ },
+ {
+  "id": "military-hospital",
+  "name": "Military Hospital",
+  "category": "Military",
+  "rarity": "Legendary",
+  "size": [
+   10,
+   10
+  ],
+  "stats": [
+   "Cost: $7,500,000",
+   "Resell: $750,000",
+   "Build: 18 min",
+   "Function: Support",
+   "Unit: Ambulance",
+   "HP: 1650"
+  ],
+  "icon": "assets/buildings/roblox-asset-97202858406553.png"
+ },
+ {
+  "id": "bio-rocket",
+  "name": "Bio Rocket",
+  "category": "Military",
+  "rarity": "Mythic",
+  "size": [
+   12,
+   12
+  ],
+  "stats": [
+   "Cost: $8,000,000",
+   "Build Time: 1.5 hr",
+   "Cooldown: 120s",
+   "Flight Time: 12s",
+   "Explosion Damage: 50",
+   "Radius: 120",
+   "Bio Duration: 12s",
+   "Ramping Damage (Every 2s): 10 \u2192 25 \u2192 40 \u2192 75 \u2192 125 \u2192 150",
+   "Max Damage: 475"
+  ],
+  "icon": "assets/buildings/roblox-asset-130828157650348.png"
+ },
+ {
+  "id": "general-s-base",
+  "name": "General's Base",
+  "category": "Military",
+  "rarity": "Mythic",
+  "size": [
+   9,
+   9
+  ],
+  "stats": [
+   "Cost: $10,000,000",
+   "Resell: $1,000,000",
+   "Build: 1h 30m",
+   "Function: Strategic Air",
+   "Units: 5 B2 Bombers",
+   "HP: 1,200"
+  ],
+  "icon": "assets/buildings/roblox-asset-110353354364541.png"
+ },
+ {
+  "id": "air-base",
+  "name": "Air Base",
+  "category": "Military",
+  "rarity": "Mythic",
+  "size": [
+   10,
+   10
+  ],
+  "stats": [
+   "Cost: $50,000,000",
+   "Resell: $5,000,000",
+   "Build: 1h 30m",
+   "Function: Air Support",
+   "Units: 2 Black Hawks",
+   "HP: 1,500"
+  ],
+  "icon": "assets/buildings/roblox-asset-88592599695298.png"
+ },
+ {
+  "id": "artillery-depot",
+  "name": "Artillery Depot",
+  "category": "Military",
+  "rarity": "Mythic",
+  "size": [
+   10,
+   10
+  ],
+  "stats": [
+   "Cost: $250,000,000",
+   "Resell: $25,000,000",
+   "Build: 2h 3m 18s",
+   "Function: Heavy Artillery",
+   "Units: 2 Rocket Tanks",
+   "HP: 3,000"
+  ],
+  "icon": "assets/buildings/roblox-asset-114635006449451.png"
+ },
+ {
+  "id": "rocket-bunker",
+  "name": "Rocket Bunker",
+  "category": "Military",
+  "rarity": "Secret",
+  "size": [
+   12,
+   12
+  ],
+  "stats": [
+   "Cost: $5,000,000,000",
+   "Resell: $500,000,000",
+   "Build: 24 hr",
+   "Function: Ultimate Artillery",
+   "Units: 2 Elite Artillery Units",
+   "HP: 2,750"
+  ],
+  "icon": "assets/buildings/roblox-asset-99472566802315.png"
+ },
+ {
+  "id": "mech-station",
+  "name": "Mech Station",
+  "category": "Military",
+  "rarity": "Secret",
+  "size": [
+   12,
+   12
+  ],
+  "stats": [
+   "Cost: $25,000,000,000",
+   "Resell: $250,000,000",
+   "Build: 48 hr",
+   "Function: Mech Production",
+   "Units: 2 Mech Units",
+   "HP: 4,500"
+  ],
+  "icon": "assets/buildings/roblox-asset-112049077306667.png"
+ },
+ {
+  "id": "spider-base",
+  "name": "Spider Base",
+  "category": "Military",
+  "rarity": "Secret",
+  "size": [
+   18,
+   12
+  ],
+  "stats": [
+   "Cost: $75,000,000,000",
+   "Resell: $7,500,000,000",
+   "Build Time: 72 hr",
+   "Function: Spider Mech Production",
+   "Units: 2 Spiders",
+   "HP: 8,000"
+  ],
+  "icon": "assets/buildings/roblox-asset-97485025503257.png"
+ },
+ {
+  "id": "air-fortress",
+  "name": "Air Fortress",
+  "category": "Military",
+  "rarity": "Divine",
+  "size": [
+   20,
+   13
+  ],
+  "stats": [
+   "Cost: $150,000,000,000",
+   "Resell: $15,000,000,000",
+   "Build Time: 72 hr",
+   "Function: Air Unit Production",
+   "Units: 2 Night Copters",
+   "HP: 12,500"
+  ],
+  "icon": "assets/buildings/roblox-asset-107421871714250.png"
+ },
+ {
+  "id": "plasma-rocket",
+  "name": "Plasma Rocket",
+  "category": "Military",
+  "rarity": "Divine",
+  "size": [
+   12,
+   12
+  ],
+  "stats": [
+   "Cost: $250,000,000,000",
+   "Resell: $25,000,000,000",
+   "Build Time: 96 hr",
+   "Function: Offensive Structure",
+   "Units: Missle System",
+   "HP: N/A"
+  ],
+  "icon": "assets/buildings/roblox-asset-103761039768687.png"
+ },
+ {
+  "id": "plasma-hangar",
+  "name": "Plasma Hangar",
+  "category": "Military",
+  "rarity": "Divine",
+  "size": [
+   16,
+   16
+  ],
+  "stats": [
+   "Cost: $500,000,000,000",
+   "Resell: $50,000,000,000",
+   "Build Time: 96 hr",
+   "Function: Plasma Heavy Armor Production",
+   "Units: 2 Plasma Tanks",
+   "HP: 18,750"
+  ],
+  "icon": "assets/buildings/roblox-asset-80752462349244.png"
+ },
+ {
+  "id": "pentagon",
+  "name": "Pentagon",
+  "category": "Military",
+  "rarity": "Limited",
+  "size": [
+   15,
+   15
+  ],
+  "stats": [
+   "Cost: Veteran Crate",
+   "Resell: $1,000,000,000",
+   "Build: 1 hr",
+   "Function: Strategic Air",
+   "Units: 3 B2 Bombers / F22 Jets",
+   "HP: 1200\u20132200"
+  ],
+  "icon": "assets/buildings/roblox-asset-80003867841607.png"
+ },
+ {
+  "id": "sci-fi-tank-hangar",
+  "name": "Sci-Fi Tank Hangar",
+  "category": "Military",
+  "rarity": "Limited",
+  "size": [
+   10,
+   10
+  ],
+  "stats": [
+   "Cost: Prototype Crate (Daily / Robux)",
+   "Resell: $21,312,312,312",
+   "Build: 48 hr",
+   "Function: Heavy Armor Production",
+   "Units: 2 Tank Cores",
+   "HP: N/A"
+  ],
+  "icon": "assets/buildings/roblox-asset-132316861638328.png"
+ },
+ {
+  "id": "workshop",
+  "name": "Workshop",
+  "category": "Special",
+  "rarity": "Rare",
+  "size": null,
+  "stats": [
+   "Cost: $10,000",
+   "Resell: $1,000",
+   "Build Time: N/A",
+   "+1 Builder (max 16 with all research + clan + general)"
+  ],
+  "icon": "assets/buildings/roblox-asset-73614440740142.png"
+ },
+ {
+  "id": "storage-center",
+  "name": "Storage Center",
+  "category": "Special",
+  "rarity": "Rare",
+  "size": null,
+  "stats": [
+   "Cost: $50,000",
+   "Resell: $5,000",
+   "Build Time: 3 min 45s",
+   "Auto-collect (5,000 cap)"
+  ],
+  "icon": "assets/buildings/roblox-asset-86423600816369.png"
+ },
+ {
+  "id": "soldier-statue",
+  "name": "Soldier Statue",
+  "category": "Special",
+  "rarity": "Epic",
+  "size": null,
+  "stats": [
+   "Cost: $100,000",
+   "Resell: $10,000",
+   "Build Time: 10 min",
+   "+10% military unit damage ir radius (don't stack)"
+  ],
+  "icon": "assets/buildings/roblox-asset-91179964089325.png"
+ },
+ {
+  "id": "worker-statue",
+  "name": "Worker Statue",
+  "category": "Special",
+  "rarity": "Epic",
+  "size": null,
+  "stats": [
+   "Cost: $100,000",
+   "Resell: $10,000",
+   "Build Time: 10 min",
+   "-10% production time (don't stack)"
+  ],
+  "icon": "assets/buildings/roblox-asset-76846825592036.png"
+ },
+ {
+  "id": "worker-statue-v2",
+  "name": "Worker Statue V2",
+  "category": "Special",
+  "rarity": "Epic",
+  "size": null,
+  "stats": [
+   "Obtainable: Raid Crate",
+   "Resell: $10,000",
+   "Build Time: 8 min",
+   "-20% production time (don't stack)"
+  ],
+  "icon": "assets/buildings/roblox-asset-100104057037600.png"
+ },
+ {
+  "id": "vault",
+  "name": "Vault",
+  "category": "Special",
+  "rarity": "Secret",
+  "size": null,
+  "stats": [
+   "Obtainable: Raid Crate",
+   "Resell: $10,000,000",
+   "Build Time: 1h",
+   "Armored Resource Collection (2,000 cap)"
+  ]
+ },
+ {
+  "id": "grass",
+  "name": "Grass",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $200",
+   "Resell: $20",
+   "Function: Cosmetic"
+  ],
+  "icon": "assets/buildings/roblox-asset-78090010148222.png"
+ },
+ {
+  "id": "road",
+  "name": "Road",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $300",
+   "Resell: $30",
+   "Function: Path"
+  ],
+  "icon": "assets/buildings/roblox-asset-72233054680368.png"
+ },
+ {
+  "id": "rocks",
+  "name": "Rocks",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $400",
+   "Resell: $40",
+   "Function: Cosmetic"
+  ],
+  "icon": "assets/buildings/roblox-asset-87595835809037.png"
+ },
+ {
+  "id": "striped-road",
+  "name": "Striped Road",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $500",
+   "Resell: $50",
+   "Function: Path"
+  ],
+  "icon": "assets/buildings/roblox-asset-74867843690527.png"
+ },
+ {
+  "id": "curved-asphalt-road",
+  "name": "Curved Asphalt Road",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $750",
+   "Resell: $75",
+   "Function: Path"
+  ]
+ },
+ {
+  "id": "street-lamp",
+  "name": "Street Lamp",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $1,000",
+   "Resell: $100",
+   "Function: Lighting"
+  ],
+  "icon": "assets/buildings/roblox-asset-92690560069943.png"
+ },
+ {
+  "id": "pine-tree",
+  "name": "Pine Tree",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $1,300",
+   "Resell: $130",
+   "Function: Nature"
+  ],
+  "icon": "assets/buildings/roblox-asset-110631798949594.png"
+ },
+ {
+  "id": "lamp",
+  "name": "Lamp",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $1,700",
+   "Resell: $170",
+   "Function: Lighting"
+  ],
+  "icon": "assets/buildings/roblox-asset-110735109622546.png"
+ },
+ {
+  "id": "tree",
+  "name": "Tree",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $2,500",
+   "Resell: $250",
+   "Function: Nature"
+  ],
+  "icon": "assets/buildings/roblox-asset-111597815458402.png"
+ },
+ {
+  "id": "car",
+  "name": "Car",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $3,000",
+   "Resell: $300",
+   "Function: Road Decor"
+  ]
+ },
+ {
+  "id": "flowers",
+  "name": "Flowers",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $4,000",
+   "Resell: $400",
+   "Function: Cosmetic"
+  ]
+ },
+ {
+  "id": "bench",
+  "name": "Bench",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $6,000",
+   "Resell: $600",
+   "Function: Utility"
+  ]
+ },
+ {
+  "id": "traffic-lights",
+  "name": "Traffic Lights",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $7,500",
+   "Resell: $750",
+   "Function: Animated Utility"
+  ]
+ },
+ {
+  "id": "fountain",
+  "name": "Fountain",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $10,000",
+   "Resell: $1,000",
+   "Function: Landmark"
+  ]
+ },
+ {
+  "id": "saluting-statue",
+  "name": "Saluting Statue",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $14,000",
+   "Resell: $1,400",
+   "Function: Landmark"
+  ]
+ },
+ {
+  "id": "statue",
+  "name": "Statue",
+  "category": "Special",
+  "rarity": "Decoration",
+  "size": null,
+  "stats": [
+   "Cost: $20,000",
+   "Resell: $2,000",
+   "Function: Landmark"
+  ],
+  "icon": "assets/buildings/roblox-asset-112043665332324.png"
+ },
+ {
+  "id": "elite-base",
+  "name": "Elite Base",
+  "category": "Black Market",
+  "rarity": "Rare",
+  "size": [
+   10,
+   10
+  ],
+  "stats": [
+   "Cost: 50 Gems",
+   "Resell: $4,000,000",
+   "Build Time: 1 hr",
+   "Function: Elite Infantry",
+   "Units: Commander, Shield Soldier, Jetpack Soldier",
+   "Military Slots: 3"
+  ],
+  "icon": "assets/buildings/roblox-asset-81741124713684.png"
+ },
+ {
+  "id": "rocket-pad",
+  "name": "Rocket Pad",
+  "category": "Black Market",
+  "rarity": "Legendary",
+  "size": [
+   10,
+   10
+  ],
+  "stats": [
+   "Cost: 400 Gems",
+   "Resell: $9,000,000",
+   "Build Time: 1 hr",
+   "Function: Missile Artillery",
+   "Rocket Amount: 9",
+   "Cooldown: 90s",
+   "Damage: 90\u2013120",
+   "Explosion Radius: 9"
+  ],
+  "icon": "assets/buildings/roblox-asset-71765018839812.png"
+ },
+ {
+  "id": "advanced-heli-pad",
+  "name": "Advanced Heli Pad",
+  "category": "Black Market",
+  "rarity": "Legendary",
+  "size": [
+   18,
+   18
+  ],
+  "stats": [
+   "Cost: 600 Gems",
+   "Resell: $9,000,000",
+   "Build Time: 6 hr",
+   "Function: Air Support",
+   "Units: Helicopter Surgeon, Helizwiad",
+   "HP: Unknown",
+   "Military Slots: 1"
+  ],
+  "icon": "assets/buildings/roblox-asset-139638447751342.png"
+ },
+ {
+  "id": "camo-tank-base",
+  "name": "Camo Tank Base",
+  "category": "Black Market",
+  "rarity": "Legendary",
+  "size": [
+   14,
+   14
+  ],
+  "stats": [
+   "Cost: 750 Gems",
+   "Resell: $9,000,000",
+   "Build Time: 2 hr",
+   "Function: Heavy Armor",
+   "Units: Elite Tank, Fast APT",
+   "HP: 2,750\u20133,500",
+   "Military Slots: 2"
+  ],
+  "icon": "assets/buildings/roblox-asset-110646706539308.png"
+ },
+ {
+  "id": "gem-mine",
+  "name": "Gem Mine",
+  "category": "Black Market",
+  "rarity": "Epic",
+  "size": null,
+  "stats": [
+   "Cost: 220 Gems",
+   "Resell: $10,000,000",
+   "Build Time: 8 min",
+   "Output: Gems",
+   "Production: +4 / 30 min",
+   "Capacity: 20",
+   "Civilian Slots: 4"
+  ],
+  "civilianSlots": 4,
+  "gemsPerHour": 8.0,
+  "icon": "assets/buildings/roblox-asset-111647953939345.png"
+ },
+ {
+  "id": "clone-facility",
+  "name": "Clone Facility",
+  "category": "Black Market",
+  "rarity": "Mythic",
+  "size": null,
+  "stats": [
+   "Cost: 950 Gems",
+   "Resell: $10,000,000",
+   "Build Time: 6 hr",
+   "Function: Farm Cloning",
+   "Capacity: 5,000",
+   "Civilian Slots: 4",
+   "Clone Rate: +27.5% per civilian",
+   "Grow Time: 10s"
+  ],
+  "civilianSlots": 4,
+  "icon": "assets/buildings/roblox-asset-104107939142290.png"
+ },
+ {
+  "id": "clone-facility-v2",
+  "name": "Clone Facility v2",
+  "category": "Black Market",
+  "rarity": "Secret",
+  "size": null,
+  "stats": [
+   "Cost: 1200 Gems",
+   "Resell: $10,000,000",
+   "Build Time: 6 hr",
+   "Function: Farm Cloning",
+   "Capacity: 5,000",
+   "Civilian Slots: 4",
+   "Clone Rate: +35% per civilian",
+   "Grow Time: 10s"
+  ],
+  "civilianSlots": 4,
+  "icon": "assets/buildings/roblox-asset-102213925857118.png"
+ },
+ {
+  "id": "research-booster",
+  "name": "Research Booster",
+  "category": "Black Market",
+  "rarity": "Epic",
+  "size": null,
+  "stats": [
+   "Cost: 125 Gems",
+   "Resell: $10,000,000",
+   "Build Time: 6 hr",
+   "Civilian Slots: 4",
+   "Boost: +4% per civilian",
+   "Max Boost: 36%"
+  ],
+  "civilianSlots": 4,
+  "icon": "assets/buildings/roblox-asset-115599442935050.png"
+ },
+ {
+  "id": "transport-pad",
+  "name": "Transport Pad",
+  "category": "Black Market",
+  "rarity": "Legendary",
+  "size": null,
+  "stats": [
+   "Cost: 180 Gems",
+   "Resell: $1,000,000",
+   "Build Time: 1 hr",
+   "Function: Resource Trading",
+   "Transport Rate: 24 Resources",
+   "Gem Chance: Yes",
+   "Boosts: Lucky Trader (+1.25%), Cargo Fortune (+1.75%)",
+   "Requires Alliance"
+  ],
+  "icon": "assets/buildings/roblox-asset-101852770636020.png"
+ },
+ {
+  "id": "construction-yard",
+  "name": "Construction Yard",
+  "category": "Black Market",
+  "rarity": "Mythic",
+  "size": null,
+  "stats": [
+   "Cost: 300 Gems",
+   "Resell: $5,000,000",
+   "Build Time: 12 hr",
+   "Function: Territory Defense",
+   "Max Amount: 3",
+   "Vehicle Type: Construction Vehicle"
+  ],
+  "icon": "assets/buildings/roblox-asset-98957687918990.png"
+ },
+ {
+  "id": "upgraded-workshop",
+  "name": "Upgraded Workshop",
+  "category": "Black Market",
+  "rarity": "Secret",
+  "size": null,
+  "stats": [
+   "Cost: 500 Gems",
+   "Resell: $50,000",
+   "Build Time: 7 hr",
+   "Function: Upgraded Builders"
+  ],
+  "icon": "assets/buildings/roblox-asset-101919854335117.png"
+ },
+ {
+  "id": "fireworks-barrel",
+  "name": "Fireworks Barrel",
+  "category": "Black Market",
+  "rarity": "Rare",
+  "size": null,
+  "stats": [
+   "Cost: 10 Gems",
+   "Resell: $30,000",
+   "Build Time: Instant",
+   "Effect: Fireworks"
+  ],
+  "icon": "assets/buildings/roblox-asset-136011185636267.png"
+ },
+ {
+  "id": "flag-pole",
+  "name": "Flag Pole",
+  "category": "Black Market",
+  "rarity": "Rare",
+  "size": null,
+  "stats": [
+   "Cost: 25 Gems",
+   "Resell: $20,000",
+   "Build Time: Instant",
+   "Effect: Displays Flag"
+  ],
+  "icon": "assets/buildings/roblox-asset-126105343215730.png"
+ },
+ {
+  "id": "ferris-wheel",
+  "name": "Ferris Wheel",
+  "category": "Black Market",
+  "rarity": "Epic",
+  "size": null,
+  "stats": [
+   "Cost: 50 Gems",
+   "Resell: $30,000",
+   "Build Time: Instant",
+   "Effect: Animated Decoration"
+  ],
+  "icon": "assets/buildings/roblox-asset-135828504103181.png"
+ },
+ {
+  "id": "player-statue",
+  "name": "Player Statue",
+  "category": "Black Market",
+  "rarity": "Legendary",
+  "size": null,
+  "stats": [
+   "Cost: 100 Gems",
+   "Resell: N/A",
+   "Build Time: Instant",
+   "Effect: Custom Player Statue"
+  ],
+  "icon": "assets/buildings/roblox-asset-112043665332324.png"
+ }
+]
