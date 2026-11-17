@@ -1886,11 +1886,11 @@
   ],
   "stats": [
    "Obtain: Crafting (12 hr, 1,500 Gems, $250,000,000,000) or crates",
-   "Production: +5 / 30 min per worker",
+   "Production: +5 / 15 min per worker",
    "Civilian Slots: 4"
   ],
   "civilianSlots": 4,
-  "gemsPerWorkerHour": 10,
+  "gemsPerWorkerHour": 20,
   "icon": "assets/buildings/roblox-asset-106549983684696.png"
  }
 ]
