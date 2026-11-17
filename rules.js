@@ -1,7 +1,10 @@
 // Hand-maintained game rules. Building stats live in data/buildings.json (generated).
 
-// Default plot size in studs. Editable in the toolbar (Bigger Plot research adds rows).
-export const DEFAULT_PLOT = { cols: 170, rows: 128 };
+// Plot size in studs, without and with the Bigger Plot research.
+export const PLOT_SIZES = { normal: { cols: 128, rows: 112 }, bigger: { cols: 160, rows: 128 } };
+
+// Generals you can equip at once, without and with the gamepass.
+export const MAX_GENERALS = { normal: 2, gamepass: 3 };
 
 // Each worker adds the mine's per-worker output; a super worker adds 50% more than a normal one.
 export const SUPER_WORKER_GEM_BONUS = 0.5;
@@ -10,6 +13,7 @@ export const SUPER_WORKER_GEM_BONUS = 0.5;
 // Alien is 2x; the others are roughly 1.5x–1.75x.
 export const MUTATIONS = { None: 1, Alien: 2, Anomaly: 1.75, Radioactive: 1.5 };
 
+// Production research applies to gem mines the same way it does to factories.
 // Production speed research: higher tiers replace lower ones.
 export const RESEARCH_SPEED = { None: 0, "Fast Workers": 0.1, "Mass Production": 0.15, "Smart Factories": 0.25 };
 

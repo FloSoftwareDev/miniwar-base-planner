@@ -1,5 +1,5 @@
 import {
-  DEFAULT_PLOT, SUPER_WORKER_GEM_BONUS, MUTATIONS, RESEARCH_SPEED, RESEARCH_AUTOMATION,
+  PLOT_SIZES, MAX_GENERALS, SUPER_WORKER_GEM_BONUS, MUTATIONS, RESEARCH_SPEED, RESEARCH_AUTOMATION,
   GENERALS, STATUES, CATEGORY_COLORS,
 } from "./rules.js";
 
@@ -37,7 +37,8 @@ function footprint(item) {
 
 function fits(item, x, y) {
   const [w, h] = footprint(item);
-  if (x < 0 || y < 0 || x + w > state.cols || y + h > state.rows) return false;
+  const plot = plotSize();
+  if (x < 0 || y < 0 || x + w > plot.cols || y + h > plot.rows) return false;
   return state.items.every((o) => {
     if (o.uid === item.uid) return true;
     const [ow, oh] = footprint(o);
@@ -57,6 +58,14 @@ function statueSpeed(item) {
     .filter((s) => STATUES[s.id])
     .filter((s) => Math.hypot(center(s).x - c.x, center(s).y - c.y) <= STATUES[s.id].radius)
     .reduce((best, s) => Math.max(best, STATUES[s.id].speed), 0);
+}
+
+function plotSize() {
+  return PLOT_SIZES[state.biggerPlot ? "bigger" : "normal"];
+}
+
+function maxGenerals() {
+  return MAX_GENERALS[state.boosts.generalsGamepass ? "gamepass" : "normal"];
 }
 
 function generalsSpeed() {
@@ -82,8 +91,8 @@ function superWorkerCapacity() {
 // ---------- persistence ----------
 
 function snapshot() {
-  const { cols, rows, items, boosts } = state;
-  return JSON.stringify({ cols, rows, items, boosts });
+  const { biggerPlot, items, boosts } = state;
+  return JSON.stringify({ biggerPlot, items, boosts });
 }
 
 function encodeLayout() {
@@ -105,7 +114,11 @@ function loadLayout() {
 }
 
 function newLayout() {
-  return { ...DEFAULT_PLOT, items: [], boosts: { research: "None", automation: "None", generals: [] } };
+  return {
+    biggerPlot: false,
+    items: [],
+    boosts: { research: "None", automation: "None", generals: [], generalsGamepass: false },
+  };
 }
 
 function save() {
@@ -142,8 +155,9 @@ function rotate(item) {
 
 function nearestFreeSpot(item) {
   let best = null;
-  for (let y = 0; y < state.rows; y++) {
-    for (let x = 0; x < state.cols; x++) {
+  const plot = plotSize();
+  for (let y = 0; y < plot.rows; y++) {
+    for (let x = 0; x < plot.cols; x++) {
       const d = Math.abs(x - item.x) + Math.abs(y - item.y);
       if ((!best || d < best.d) && fits(item, x, y)) best = { x, y, d };
     }
@@ -168,7 +182,8 @@ function remove(item) {
   });
 }
 
-function resizePlot(cols, rows) {
+function setBiggerPlot(bigger) {
+  const { cols, rows } = PLOT_SIZES[bigger ? "bigger" : "normal"];
   const outside = state.items.filter((i) => {
     const [w, h] = footprint(i);
     return i.x + w > cols || i.y + h > rows;
@@ -178,7 +193,7 @@ function resizePlot(cols, rows) {
     render();
     return;
   }
-  commit(() => { state.cols = cols; state.rows = rows; });
+  commit(() => { state.biggerPlot = bigger; });
 }
 
 // ---------- rendering ----------
@@ -214,8 +229,9 @@ function positionElement(el, x, y) {
 
 function renderGrid() {
   const grid = $("grid");
-  grid.style.width = `calc(var(--cell) * ${state.cols})`;
-  grid.style.height = `calc(var(--cell) * ${state.rows})`;
+  const plot = plotSize();
+  grid.style.width = `calc(var(--cell) * ${plot.cols})`;
+  grid.style.height = `calc(var(--cell) * ${plot.rows})`;
   grid.replaceChildren();
   for (const item of state.items) {
     const el = placeElement(item, item.uid === state.selected ? "selected" : "");
@@ -226,8 +242,8 @@ function renderGrid() {
   }
   const selected = selectedItem();
   if (selected && STATUES[selected.id]) grid.append(radiusElement(selected));
-  $("plotCols").value = state.cols;
-  $("plotRows").value = state.rows;
+  $("biggerPlot").checked = state.biggerPlot;
+  $("plotSize").textContent = `${plot.cols}×${plot.rows}`;
 }
 
 function radiusElement(statue) {
@@ -290,16 +306,21 @@ function options(values, selected) {
 }
 
 function renderBoosts(panel) {
-  const { research, automation, generals } = state.boosts;
+  const { research, automation, generals, generalsGamepass } = state.boosts;
+  const full = generals.length >= maxGenerals();
   panel.innerHTML = `
     <h2>Boosts</h2>
     <p class="muted">Apply to every gem mine. Select a building to edit it.</p>
     <label>Production research <select name="research">${options(Object.keys(RESEARCH_SPEED), research)}</select></label>
     <label>Automation research <select name="automation">${options(Object.keys(RESEARCH_AUTOMATION), automation)}</select></label>
-    <h3>Generals</h3>
-    ${Object.entries(GENERALS).map(([g, v]) => `
-      <label class="check"><span><input type="checkbox" name="general" value="${g}" ${generals.includes(g) ? "checked" : ""}> ${g}</span>
-      <span class="muted">+${format(v * 100)}%</span></label>`).join("")}
+    <h3>Generals (${generals.length} / ${maxGenerals()})</h3>
+    <label class="check"><span><input type="checkbox" name="generalsGamepass" ${generalsGamepass ? "checked" : ""}> Extra general gamepass</span></label>
+    ${Object.entries(GENERALS).map(([g, v]) => {
+      const checked = generals.includes(g);
+      return `
+      <label class="check"><span><input type="checkbox" name="general" value="${g}" ${checked ? "checked" : ""} ${full && !checked ? "disabled" : ""}> ${g}</span>
+      <span class="muted">+${format(v * 100)}%</span></label>`;
+    }).join("")}
     <p class="muted">Statues boost mines within their radius. Select a statue to see its range.</p>`;
   for (const name of ["research", "automation"]) {
     panel.querySelector(`[name=${name}]`).onchange = (e) => commit(() => { state.boosts[name] = e.target.value; });
@@ -309,6 +330,10 @@ function renderBoosts(panel) {
       state.boosts.generals = [...panel.querySelectorAll("[name=general]:checked")].map((b) => b.value);
     });
   }
+  panel.querySelector("[name=generalsGamepass]").onchange = (e) => commit(() => {
+    state.boosts.generalsGamepass = e.target.checked;
+    state.boosts.generals = state.boosts.generals.slice(0, maxGenerals());
+  });
 }
 
 function bindGemMineControls(panel, item, b) {
@@ -423,9 +448,7 @@ $("shareBtn").onclick = async () => {
   $("shareBtn").textContent = "Link copied!";
   setTimeout(() => { $("shareBtn").textContent = "Copy share link"; }, 1500);
 };
-for (const id of ["plotCols", "plotRows"]) {
-  $(id).onchange = () => resizePlot(Number($("plotCols").value), Number($("plotRows").value));
-}
+$("biggerPlot").onchange = (e) => setBiggerPlot(e.target.checked);
 
 window.history.replaceState(null, "", location.pathname);
 save();

@@ -17,7 +17,7 @@ header h1 { font-size: 18px; margin: 0; }
 .toolbar { display: flex; gap: 8px; align-items: center; margin-left: auto; flex-wrap: wrap; }
 button, select, input[type=number], input[type=search] { background: #334155; color: var(--text); border: 1px solid #475569; border-radius: 6px; padding: 6px 8px; font: inherit; }
 button:hover { background: #475569; cursor: pointer; }
-.toolbar input[type=number] { width: 64px; }
+.toolbar .muted { color: var(--muted); }
 main { flex: 1; display: flex; min-height: 0; }
 aside { width: 250px; background: var(--panel); padding: 12px; overflow-y: auto; flex: none; }
 #search { width: 100%; margin-bottom: 4px; }
