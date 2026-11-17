@@ -78,12 +78,12 @@ def parse_cards(wikitext, category):
 
 
 def parse_gem_production(card):
-    """'+4 / 30 min' (per worker) -> gems per worker per hour."""
+    """'+4 / 30 min' (per worker) -> (gems per worker per cycle, cycle seconds)."""
     stat = next(s for s in card["stats"] if s.startswith("Production:"))
     m = re.search(r"\+([\d.]+)\s*/\s*(\d+)\s*(min|s|hr)", stat)
     amount, period, unit = float(m.group(1)), int(m.group(2)), m.group(3)
     seconds = period * {"s": 1, "min": 60, "hr": 3600}[unit]
-    return amount * 3600 / seconds
+    return amount, seconds
 
 
 def parse_icon_wiki(pages):
@@ -129,7 +129,7 @@ def main():
     size_overrides = json.loads((ROOT / "data" / "size-overrides.json").read_text())
     cards += json.loads((ROOT / "data" / "extra-buildings.json").read_text())
     gem_mine = next(c for c in cards if c["name"] == "Gem Mine")
-    gem_mine["gemsPerWorkerHour"] = parse_gem_production(gem_mine)
+    gem_mine["gemsPerCycle"], gem_mine["cycleSeconds"] = parse_gem_production(gem_mine)
 
     buildings, icons, missing_size = [], [], []
     for c in cards:
@@ -139,7 +139,7 @@ def main():
             missing_size.append(c["name"])
         b = {"id": slug(c["name"]), "name": c["name"], "category": c["category"],
              "rarity": c["rarity"], "size": size, "stats": c["stats"]}
-        for k in ("civilianSlots", "maxSuperWorkers", "civilians", "gemsPerWorkerHour"):
+        for k in ("civilianSlots", "maxSuperWorkers", "civilians", "gemsPerCycle", "cycleSeconds"):
             if k in c:
                 b[k] = c[k]
         image = c.get("image") or extra.get("image")

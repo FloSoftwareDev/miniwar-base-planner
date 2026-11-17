@@ -50,6 +50,9 @@ aside { width: 250px; background: var(--panel); padding: 12px; overflow-y: auto;
 #inspector input[type=number] { width: 70px; }
 #inspector ul { padding-left: 18px; color: var(--muted); font-size: 13px; }
 #inspector .buttons { display: flex; gap: 6px; margin: 12px 0; }
+#inspector h3 { font-size: 13px; text-transform: uppercase; color: var(--muted); margin: 16px 0 4px; }
+#inspector label.check { margin: 4px 0; font-size: 13px; }
+.radius { position: absolute; border-radius: 50%; border: 2px dashed #fde047; background: rgba(253, 224, 71, .08); pointer-events: none; z-index: 1; }
 #inspector .mine-output { font-size: 16px; margin-top: 10px; }
 #inspector .mine-output strong { color: var(--accent); }
 footer { padding: 6px 16px; background: var(--panel); color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); }

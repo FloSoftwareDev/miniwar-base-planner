@@ -1,4 +1,7 @@
-import { DEFAULT_PLOT, SUPER_WORKER_GEM_BONUS, MUTATIONS, CATEGORY_COLORS } from "./rules.js";
+import {
+  DEFAULT_PLOT, SUPER_WORKER_GEM_BONUS, MUTATIONS, RESEARCH_SPEED, RESEARCH_AUTOMATION,
+  GENERALS, STATUES, CATEGORY_COLORS,
+} from "./rules.js";
 
 const STORAGE_KEY = "miniwar-planner-layout";
 const $ = (id) => document.getElementById(id);
@@ -18,7 +21,7 @@ async function loadCatalog() {
 }
 
 function isGemMine(item) {
-  return "gemsPerWorkerHour" in catalog[item.id];
+  return "gemsPerCycle" in catalog[item.id];
 }
 
 function newItem(id, x, y, rot) {
@@ -42,9 +45,34 @@ function fits(item, x, y) {
   });
 }
 
+function center(item) {
+  const [w, h] = footprint(item);
+  return { x: item.x + w / 2, y: item.y + h / 2 };
+}
+
+// Strongest statue whose radius reaches the item's center (statue boosts don't stack).
+function statueSpeed(item) {
+  const c = center(item);
+  return state.items
+    .filter((s) => STATUES[s.id])
+    .filter((s) => Math.hypot(center(s).x - c.x, center(s).y - c.y) <= STATUES[s.id].radius)
+    .reduce((best, s) => Math.max(best, STATUES[s.id].speed), 0);
+}
+
+function generalsSpeed() {
+  return state.boosts.generals.reduce((sum, g) => sum + GENERALS[g], 0);
+}
+
+function speedMultiplier(item) {
+  return 1 + RESEARCH_SPEED[state.boosts.research] + generalsSpeed() + statueSpeed(item);
+}
+
 function gemsPerHour(item) {
+  const b = catalog[item.id];
+  const perWorkerCycle = b.gemsPerCycle + RESEARCH_AUTOMATION[state.boosts.automation];
   const workerUnits = item.workers + item.superWorkers * (1 + SUPER_WORKER_GEM_BONUS);
-  return catalog[item.id].gemsPerWorkerHour * workerUnits * MUTATIONS[item.mutation];
+  const cyclesPerHour = 3600 / b.cycleSeconds;
+  return perWorkerCycle * workerUnits * cyclesPerHour * speedMultiplier(item) * MUTATIONS[item.mutation];
 }
 
 function superWorkerCapacity() {
@@ -53,9 +81,13 @@ function superWorkerCapacity() {
 
 // ---------- persistence ----------
 
+function snapshot() {
+  const { cols, rows, items, boosts } = state;
+  return JSON.stringify({ cols, rows, items, boosts });
+}
+
 function encodeLayout() {
-  const { cols, rows, items } = state;
-  return btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify({ cols, rows, items }))));
+  return btoa(String.fromCharCode(...new TextEncoder().encode(snapshot())));
 }
 
 function decodeLayout(text) {
@@ -65,22 +97,25 @@ function decodeLayout(text) {
 function loadLayout() {
   const shared = location.hash.slice(1);
   const saved = localStorage.getItem(STORAGE_KEY);
-  const layout = shared ? decodeLayout(shared) : saved ? JSON.parse(saved) : { ...DEFAULT_PLOT, items: [] };
+  const layout = shared ? decodeLayout(shared) : saved ? JSON.parse(saved) : newLayout();
   for (const item of layout.items) {
     if (!catalog[item.id]) throw new Error(`Unknown building in layout: ${item.id}`);
   }
   return { ...layout, selected: null };
 }
 
+function newLayout() {
+  return { ...DEFAULT_PLOT, items: [], boosts: { research: "None", automation: "None", generals: [] } };
+}
+
 function save() {
-  const { cols, rows, items } = state;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify({ cols, rows, items }));
+  localStorage.setItem(STORAGE_KEY, snapshot());
 }
 
 // ---------- mutations ----------
 
 function commit(change) {
-  undoStack.push(JSON.stringify({ cols: state.cols, rows: state.rows, items: state.items }));
+  undoStack.push(snapshot());
   change();
   save();
   render();
@@ -189,8 +224,20 @@ function renderGrid() {
     el.addEventListener("pointerdown", (e) => startDrag(e, e.altKey ? "copy" : "move", item));
     grid.append(el);
   }
+  const selected = selectedItem();
+  if (selected && STATUES[selected.id]) grid.append(radiusElement(selected));
   $("plotCols").value = state.cols;
   $("plotRows").value = state.rows;
+}
+
+function radiusElement(statue) {
+  const { radius } = STATUES[statue.id];
+  const c = center(statue);
+  const el = document.createElement("div");
+  el.className = "radius";
+  el.style.width = el.style.height = `calc(var(--cell) * ${radius * 2})`;
+  positionElement(el, c.x - radius, c.y - radius);
+  return el;
 }
 
 function renderStats() {
@@ -209,10 +256,7 @@ function format(n) {
 function renderInspector() {
   const panel = $("inspector");
   const item = selectedItem();
-  if (!item) {
-    panel.innerHTML = `<p class="muted">Select a building to edit it.</p>`;
-    return;
-  }
+  if (!item) return renderBoosts(panel);
   const b = catalog[item.id];
   const [w, h] = footprint(item);
   panel.innerHTML = `
@@ -232,14 +276,39 @@ function renderInspector() {
 }
 
 function gemMineControls(item, b) {
-  const options = Object.keys(MUTATIONS)
-    .map((m) => `<option ${m === item.mutation ? "selected" : ""}>${m}</option>`).join("");
   return `
     <label>Workers <input type="number" name="workers" min="0" max="${b.civilianSlots}" value="${item.workers}"></label>
     <label>Super workers <input type="number" name="superWorkers" min="0" max="${b.civilianSlots}" value="${item.superWorkers}"></label>
-    <label>Mutation <select name="mutation">${options}</select></label>
+    <label>Mutation <select name="mutation">${options(Object.keys(MUTATIONS), item.mutation)}</select></label>
     <div class="muted">${b.civilianSlots} civilian slots shared by workers and super workers</div>
-    <div class="mine-output">This mine: <strong>${format(gemsPerHour(item))}</strong> gems/h</div>`;
+    <div class="mine-output">This mine: <strong>${format(gemsPerHour(item))}</strong> gems/h</div>
+    <div class="muted">Speed ×${format(speedMultiplier(item))} (statue +${format(statueSpeed(item) * 100)}%)</div>`;
+}
+
+function options(values, selected) {
+  return values.map((v) => `<option ${v === selected ? "selected" : ""}>${v}</option>`).join("");
+}
+
+function renderBoosts(panel) {
+  const { research, automation, generals } = state.boosts;
+  panel.innerHTML = `
+    <h2>Boosts</h2>
+    <p class="muted">Apply to every gem mine. Select a building to edit it.</p>
+    <label>Production research <select name="research">${options(Object.keys(RESEARCH_SPEED), research)}</select></label>
+    <label>Automation research <select name="automation">${options(Object.keys(RESEARCH_AUTOMATION), automation)}</select></label>
+    <h3>Generals</h3>
+    ${Object.entries(GENERALS).map(([g, v]) => `
+      <label class="check"><span><input type="checkbox" name="general" value="${g}" ${generals.includes(g) ? "checked" : ""}> ${g}</span>
+      <span class="muted">+${format(v * 100)}%</span></label>`).join("")}
+    <p class="muted">Statues boost mines within their radius. Select a statue to see its range.</p>`;
+  for (const name of ["research", "automation"]) {
+    panel.querySelector(`[name=${name}]`).onchange = (e) => commit(() => { state.boosts[name] = e.target.value; });
+  }
+  for (const box of panel.querySelectorAll("[name=general]")) {
+    box.onchange = () => commit(() => {
+      state.boosts.generals = [...panel.querySelectorAll("[name=general]:checked")].map((b) => b.value);
+    });
+  }
 }
 
 function bindGemMineControls(panel, item, b) {

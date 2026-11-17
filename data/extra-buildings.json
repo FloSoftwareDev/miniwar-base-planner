@@ -3,10 +3,30 @@
   "name": "Gem Deep Mine",
   "category": "Black Market",
   "rarity": "Secret",
-  "size": [14, 14],
+  "size": [
+   14,
+   14
+  ],
   "civilianSlots": 4,
-  "gemsPerWorkerHour": 20,
   "image": "roblox_asset_106549983684696.png",
-  "stats": ["Obtain: Crafting (12 hr, 1,500 Gems, $250,000,000,000) or crates", "Production: +5 / 15 min per worker", "Civilian Slots: 4"]
+  "stats": [
+   "Obtain: Crafting (12 hr, 1,500 Gems, $250,000,000,000) or crates",
+   "Production: +5 / 15 min per worker",
+   "Civilian Slots: 4"
+  ],
+  "gemsPerCycle": 5,
+  "cycleSeconds": 900
+ },
+ {
+  "name": "Manager Statue",
+  "category": "Special",
+  "rarity": "Legendary",
+  "image": "roblox_asset_110953621334486.png",
+  "stats": [
+   "Cost: $25,000,000",
+   "Build Time: 1 hr",
+   "Radius: 15",
+   "Worker Speed Boost: +25% (not stackable)"
+  ]
  }
 ]

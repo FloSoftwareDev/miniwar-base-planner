@@ -1713,7 +1713,8 @@
    "Civilian Slots: 4"
   ],
   "civilianSlots": 4,
-  "gemsPerWorkerHour": 8.0,
+  "gemsPerCycle": 4.0,
+  "cycleSeconds": 1800,
   "icon": "assets/buildings/roblox-asset-111647953939345.png"
  },
  {
@@ -1890,7 +1891,22 @@
    "Civilian Slots: 4"
   ],
   "civilianSlots": 4,
-  "gemsPerWorkerHour": 20,
+  "gemsPerCycle": 5,
+  "cycleSeconds": 900,
   "icon": "assets/buildings/roblox-asset-106549983684696.png"
+ },
+ {
+  "id": "manager-statue",
+  "name": "Manager Statue",
+  "category": "Special",
+  "rarity": "Legendary",
+  "size": null,
+  "stats": [
+   "Cost: $25,000,000",
+   "Build Time: 1 hr",
+   "Radius: 15",
+   "Worker Speed Boost: +25% (not stackable)"
+  ],
+  "icon": "assets/buildings/roblox-asset-110953621334486.png"
  }
 ]
