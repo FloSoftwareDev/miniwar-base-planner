@@ -36,6 +36,8 @@ export const STATUES = {
   "worker-statue": { speed: 0.1, radius: 10 },
   "worker-statue-v2": { speed: 0.2, radius: 20 },
   "manager-statue": { speed: 0.25, radius: 15 },
+  "silver-beast-statue": { speed: 0.3, radius: 25 },
+  "gold-beast-statue": { speed: 0.5, radius: 25 },
 };
 
 export const CATEGORY_COLORS = {

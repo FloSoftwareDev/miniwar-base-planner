@@ -28,5 +28,43 @@
    "Radius: 15",
    "Worker Speed Boost: +25% (not stackable)"
   ]
+ },
+ {
+  "name": "Silver Beast Statue",
+  "category": "Special",
+  "rarity": "Event",
+  "size": [
+   4,
+   4
+  ],
+  "stats": [
+   "Radius: 25",
+   "Worker Speed Boost: +30% (not stackable)"
+  ]
+ },
+ {
+  "name": "Gold Beast Statue",
+  "category": "Special",
+  "rarity": "Event",
+  "size": [
+   4,
+   4
+  ],
+  "stats": [
+   "Radius: 25",
+   "Worker Speed Boost: +50% (not stackable)"
+  ]
+ },
+ {
+  "name": "Super Worker Statue",
+  "category": "Special",
+  "rarity": "Unknown",
+  "size": [
+   2,
+   2
+  ],
+  "stats": [
+   "Effect: not added to the planner yet"
+  ]
  }
 ]

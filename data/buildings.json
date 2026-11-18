@@ -1908,5 +1908,46 @@
    "Worker Speed Boost: +25% (not stackable)"
   ],
   "icon": "assets/buildings/roblox-asset-110953621334486.png"
+ },
+ {
+  "id": "silver-beast-statue",
+  "name": "Silver Beast Statue",
+  "category": "Special",
+  "rarity": "Event",
+  "size": [
+   4,
+   4
+  ],
+  "stats": [
+   "Radius: 25",
+   "Worker Speed Boost: +30% (not stackable)"
+  ]
+ },
+ {
+  "id": "gold-beast-statue",
+  "name": "Gold Beast Statue",
+  "category": "Special",
+  "rarity": "Event",
+  "size": [
+   4,
+   4
+  ],
+  "stats": [
+   "Radius: 25",
+   "Worker Speed Boost: +50% (not stackable)"
+  ]
+ },
+ {
+  "id": "super-worker-statue",
+  "name": "Super Worker Statue",
+  "category": "Special",
+  "rarity": "Unknown",
+  "size": [
+   2,
+   2
+  ],
+  "stats": [
+   "Effect: not added to the planner yet"
+  ]
  }
 ]
